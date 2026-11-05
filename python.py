@@ -1,13 +1,20 @@
-xh = input('enter hours:')
-xr = input('enter rate:')
+x = input('enter list length')
 try :
-    xh = float(xh)
-    xr = float(xr)
+    x = int(x)
 except :
-    xh = -1
-    xr = -1
-xp = xh * xr
-if xh > 0 and xr > 0:
-    print('payment is',xp)
-else:
     print('enter a valid number')
+    quit()
+
+num = []
+
+for i in range(x):
+    n = int(input("enter a number"))
+    num.append(n)
+
+max_num = num[0]
+
+for i in range(x):
+    if(max_num < num[i]):
+        max_num = num[i]
+
+print(max_num)
